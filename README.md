@@ -8,6 +8,7 @@ decks in this card game. The user can browse a list complete list of all it's de
 --------------------------------
 Road map / Plans
 --------------------------------
+
 // Version 1.0 //
 * Add decks
 * Remove decks
@@ -30,6 +31,7 @@ Road map / Plans
 --------------------------------
 Database structure
 --------------------------------
+
 Microsoft SQL Databas
 DB = KeyForgeDCM
 
@@ -51,6 +53,7 @@ Might add user details later in development
 --------------------------------
 API
 --------------------------------
+
 ASP.NET RESTful API
 This API handles the connection to the database
 
@@ -58,5 +61,6 @@ This API handles the connection to the database
 --------------------------------
 CLIENT
 --------------------------------
+
 GUI as a web application - HTML/CSS/JS/ (VUE or Angular, yet to be decided)
 
