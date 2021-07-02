@@ -27,4 +27,8 @@
   color: #2c3e50;
   margin-left: 0px;
 }
+
+body {
+  margin: 0;
+}
 </style>
