@@ -1,5 +1,5 @@
 <template>
-    <input type='text' id="search-field" placeholder="Search for decks..." @keyup="search">
+    <input type='text' id="search-field" placeholder="Search among decks..." @keyup="search">
 </template>
 
 <script>

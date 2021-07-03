@@ -2,6 +2,7 @@
     <div class="header-wrapper">
         <ul class="navigation-bar">
             <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="Decks">Decks</router-link></li>
         </ul>
     </div>
 </template>
