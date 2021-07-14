@@ -1,14 +1,10 @@
 <template>
-    <input type='text' id="search-field" placeholder="Search among decks..." @keyup="search">
+    <input type='text' id="search-field" placeholder="Search decks..." @keyup="search">
 </template>
 
 <script>
     export default {
         methods: {
-            handleClick(){
-                $('#search-field').attr("placeholder", "");
-            },
-
             search(){
                 this.$store.state.searches = $('#search-field').val()
             }
@@ -18,8 +14,10 @@
 
 <style scoped>
 #search-field {
-    width: 400px;
+    width: 800px;
+    max-width: 80%;
     height: 40px;
+    margin: 10px;
     padding-left: 10px;
     border-radius: 5px;
     border-style: solid;

@@ -28,14 +28,35 @@ namespace KeyForgeDCM_API.Controllers
         }
 
         // GET: api/Decks/{id}
-        [HttpGet("api/Decks/{id}")]
+        [HttpGet("/{id}")]
         public async Task<ActionResult<IEnumerable<Deck>>> GetDeckById(int id)
         {
             return await _context.Decks.Where(d => d.DeckId == id).ToListAsync();
         }
 
+        // POST: api/Decks/{deckName}
+        [HttpPost("/Add/{deckName}")]
+        public void AddDeck(string deckName)
+        {
+            var deckToAdd = new Deck();
+
+            deckToAdd.DeckName = deckName;
+
+            try
+            {
+                _context.Decks.Add(deckToAdd);
+                _context.SaveChanges();
+                Console.WriteLine("Deck added successfully");
+            }
+            catch
+            {
+                Console.WriteLine("Something went wrong, deck was not added!");
+            }
+            
+        }
+
         // POST: api/Decks/{id}
-        [HttpPost("api/Decks/Delete/{id}")]
+        [HttpPost("/Delete/{id}")]
         public void DeleteDeckById(int id)
         {
             var deckToRemove = _context.Decks.SingleOrDefault(d => d.DeckId == id);

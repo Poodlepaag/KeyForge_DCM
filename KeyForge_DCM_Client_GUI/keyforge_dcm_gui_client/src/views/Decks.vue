@@ -1,21 +1,21 @@
 <template>
-    <div>
+    <div class="searchbar-wrapper">
         <Searchbar />
     </div>
     <div>
-        <h1>KeyForge Deck Collection Manager</h1>
-        <p>Decks</p>
-        <div v-if="searchString == ''">
+        <div v-if="searchString === '' ">
         <ul class="list-of-results">
             <li v-for="deck in decks" :key="deck.deckId">
-            <h3>{{ deck.deckId }}, {{ deck.deckName }}</h3>
+                <h3>{{ deck.deckId }}, {{ deck.deckName }}</h3>
+                <hr class="difference-line">
             </li>
         </ul>
         </div>
         <div v-else>
         <ul class="list-of-results" v-for="deck in decks" :key="deck">
             <li v-if="deck.deckName.toLowerCase().includes(searchString)">
-            <h3>{{ deck.deckId }}, {{ deck.deckName }}</h3>
+                <h3>{{ deck.deckId }}, {{ deck.deckName }}</h3>
+                <hr class="difference-line">
             </li>
         </ul>
         </div>
@@ -42,5 +42,16 @@
 <style>
 .list-of-results {
   list-style: none;
+  width: 90%;
+  margin: auto;
+}
+
+.searchbar-wrapper {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.difference-line {
+    opacity: 20%;
 }
 </style>
