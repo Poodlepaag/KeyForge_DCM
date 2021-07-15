@@ -6,7 +6,7 @@
         <div v-if="search == undefined">
             <ul class="list-of-results">
                 <li v-for="deck in decks" :key="deck.deckId">
-                    <h3>{{ deck.deckId }}, {{ deck.deckName }}</h3>
+                    <h3>#{{ deck.deckId }} - {{ deck.deckName }}</h3>
                     <hr class="difference-line">
                 </li>
             </ul>
@@ -25,36 +25,25 @@
 <script>
     import Searchbar from '../components/Searchbar.vue'
     export default {
-        data() {
-            return {
-                decks: [],
-            }            
-        },
         components: {
             Searchbar,
         },
         computed: {
-            search(){
+            searchString(){
                 return this.$store.state.searches
             },
+            decks(){
+                return this.$store.state.decks
+            }
         },
-        mounted() {
-            this.decks = this.$store.state.decks
-        },
-        beforeUnmount() {
-            this.$store.state.searches = ''
-        }
     };
 </script>
 
 <style>
 .list-of-results {
   list-style: none;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  color: gray;
-  font-family:sans-serif;
-  padding: 0px;
 }
 
 .searchbar-wrapper {
@@ -64,7 +53,5 @@
 
 .difference-line {
     opacity: 20%;
-    width: 100%;
-    margin-left: 0px;
 }
 </style>
