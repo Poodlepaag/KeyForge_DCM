@@ -40,6 +40,9 @@
         },
         mounted() {
             this.decks = this.$store.state.decks
+        },
+        beforeUnmount() {
+            this.$store.state.searches = ''
         }
     };
 </script>
@@ -47,8 +50,11 @@
 <style>
 .list-of-results {
   list-style: none;
-  width: 90%;
+  width: 80%;
   margin: auto;
+  color: gray;
+  font-family:sans-serif;
+  padding: 0px;
 }
 
 .searchbar-wrapper {
@@ -58,5 +64,7 @@
 
 .difference-line {
     opacity: 20%;
+    width: 100%;
+    margin-left: 0px;
 }
 </style>
