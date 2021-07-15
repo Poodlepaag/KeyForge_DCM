@@ -16,7 +16,7 @@ export default createStore({
       deck: []
     },
 
-    searches: {}
+    searches: '',
   },
   mutations: {
     setDecks(state, data){
