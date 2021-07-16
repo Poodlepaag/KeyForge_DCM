@@ -43,6 +43,7 @@
     list-style: none;
     margin: auto;
     text-align: center;
+    padding: 0px;
 }
 
 .navigation-bar-item {

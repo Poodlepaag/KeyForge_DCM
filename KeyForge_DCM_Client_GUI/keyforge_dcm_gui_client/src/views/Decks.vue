@@ -1,4 +1,7 @@
 <template>
+    <div class="create-deck-wrapper">
+        <button class="normal-button">Create Deck</button>
+    </div>
     <div class="searchbar-wrapper">
         <Searchbar />
     </div>
@@ -52,6 +55,7 @@
   list-style: none;
   width: 90%;
   margin: auto;
+  padding: 0px;
 }
 
 .searchbar-wrapper {
@@ -61,5 +65,28 @@
 
 .difference-line {
     opacity: 20%;
+}
+
+.create-deck-wrapper {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.normal-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #47597e;
+    color: white;
+}
+
+.normal-button:hover {
+    opacity: 70%;
+}
+
+.normal-button:active {
+    background-color: orange;
 }
 </style>
